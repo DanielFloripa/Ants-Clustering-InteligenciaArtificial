@@ -5,6 +5,6 @@
 
 2) Ants Clustering Data Mining
 
-3) ... Serão adicionados novos
+3) ...
 
 
