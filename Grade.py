@@ -129,6 +129,7 @@ class Grade:
                     if o is not None:
                         sim = d.distancia(o)
                         total += sim
+        ## Versao Academica
         #if total < 78.6 and total > 0: asd
         #	return 0.0001
         #cells = math.pow((n * 2) + 1, 2) - 1
