@@ -129,22 +129,21 @@ class Grade:
                     if o is not None:
                         sim = d.distancia(o)
                         total += sim
-        if total < 78.6 and total > 0: asd
-        	print "Otimooooo: ", total
-        	return 0.0001
-        cells = math.pow((n * 2) + 1, 2) - 1
-        f = (total) / (20 * cells)
-        probabilidade = max(min(f, 1), 0)
+        #if total < 78.6 and total > 0: asd
+        #	return 0.0001
+        #cells = math.pow((n * 2) + 1, 2) - 1
+        #f = (total) / (20 * cells)
+        #probabilidade = max(min(f, 1), 0)
         #print "Total: ", total, " Probabilidade", probabilidade
-        return probabilidade
+        #return probabilidade
 
 
         # Normaliza a densidade para a maxima distancia vista ate o momento
-        # md = total / (math.pow((n * 2) + 1, 2) - 1)
-        # if md > self.max_d:
-        #     self.max_d = md
-        # densidade = total / (self.max_d * (math.pow((n * 2) + 1, 2) - 1))
-        # densidade = max(min(densidade, 1), 0) # retorna 0 < d < 1. Se densidade < 0, retorna 0; se > 1 retorna 1
-        # t = math.exp(-c * densidade)
-        # probabilidade = (1 - t) / (1 + t)
-        # return probabilidade
+         md = total / (math.pow((n * 2) + 1, 2) - 1)
+         if md > self.max_d:
+             self.max_d = md
+         densidade = total / (self.max_d * (math.pow((n * 2) + 1, 2) - 1))
+         densidade = max(min(densidade, 1), 0) # retorna 0 < d < 1. Se densidade < 0, retorna 0; se > 1 retorna 1
+         t = math.exp(-c * densidade)
+         probabilidade = (1 - t) / (1 + t)
+         return probabilidade
